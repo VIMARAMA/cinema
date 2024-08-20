@@ -6,11 +6,12 @@ let nextId = 1;
 
 const model = (sessao, id = nextId++) => {
   if (
-    sessao.data > 0  &&
-    sessao.hora > 0  &&
+    sessao.data > 0 &&
+    sessao.hora > 0 &&
     sessao.filme_id != undefined &&
-    sessao.sala_id != undefined+ //FIXME
-    filme_controller.show(sessao.filme_id) &&
+    sessao.sala_id !=
+      undefined + //FIXME
+        filme_controller.show(sessao.filme_id) &&
     sala_controller.show(sessao.sala_id) //FIXME
   )
     return {
