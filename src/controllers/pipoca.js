@@ -1,20 +1,12 @@
 const db = [];
 let nextId = 1;
-const sessao = require("./sessao");
-const funcionario = require("./funcionarios");
-const pipoca = require("./pipoca");
 
-const model = (id = nextId++) => {
-  if (
-    sessao.show(id_sessao) &&
-    funcionario.show(id_funcionario) &&
-    pipoca.show(id_pipoca)
-  ) {
+const model = (pipoca, id = nextId++) => {
+  if (pipoca.sabor != undefined && pipoca.sabor != "" && pipoca.size != "") {
     return {
       id,
-      id_sessao,
-      id_funcionario,
-      id_pipoca,
+      sabor: pipoca.sabor,
+      tamanho: pipoca.size
     };
   }
 };

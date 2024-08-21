@@ -1,13 +1,17 @@
 const db = [];
 let nextId = 1;
-const sessao = require("./sessao")
+const sessao = require("./sessao");
 
 const model = (cliente, id = nextId++) => {
-  if (cliente.nome != undefined && cliente.nome != "" && cliente.sessao != "") {
+  if (
+    cliente.nome != undefined &&
+    cliente.nome != "" &&
+    sessao.show(id_sessao)
+  ) {
     return {
       id,
       nome: cliente.nome,
-      sessão: cliente.sessao.id
+      id_sessao,
     };
   }
 };

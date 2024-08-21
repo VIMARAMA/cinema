@@ -1,12 +1,12 @@
 const db = [];
 let nextId = 1;
-const funcionario = require("./funcionarios")
+const funcionario = require("./funcionarios");
 
-const model = (funcionario, id = nextId++) => {
-  if (funcionario.nome != undefined && funcionario.nome != "") {
+const model = (id = nextId++) => {
+  if (funcionario.show(id_funcionario)) {
     return {
       id,
-      funcionário: funcionario.nome
+      id_funcionario,
     };
   }
 };
