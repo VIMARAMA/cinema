@@ -1,20 +1,20 @@
 const db = [];
 let nextId = 1;
-const sessao = require("./sessao");
-const funcionario = require("./funcionarios");
-const pipoca = require("./pipoca");
+const sessao_controller = require("./sessao");
+const funcionarios_controller = require("./funcionarios");
+const pipoca_controller = require("./pipoca");
 
-const model = (id = nextId++) => {
+const model = (bilheteria, id = nextId++) => {
   if (
-    sessao.show(id_sessao) &&
-    funcionario.show(id_funcionario) &&
-    pipoca.show(id_pipoca)
+    sessao_controller.show(bilheteria.id_sessao) &&
+    funcionarios_controller.show(bilheteria.id_funcionario) &&
+    pipoca_controller.show(bilheteria.id_pipoca)
   ) {
     return {
       id,
-      id_sessao,
-      id_funcionario,
-      id_pipoca,
+      sessao: bilheteria.id_sessao,
+      funcionario: bilheteria.id_funcionario,
+      pipoca: bilheteria.id_pipoca,
     };
   }
 };

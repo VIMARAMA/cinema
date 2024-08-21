@@ -1,12 +1,12 @@
 const db = [];
 let nextId = 1;
-const funcionario = require("./funcionarios");
+const funcionarios_controller = require("./funcionarios");
 
-const model = (id = nextId++) => {
-  if (funcionario.show(id_funcionario)) {
+const model = (sala, id = nextId++) => {
+  if (funcionarios_controller.show(sala.id_funcionario)) {
     return {
       id,
-      id_funcionario,
+      funcionario: sala.id_funcionario,
     };
   }
 };

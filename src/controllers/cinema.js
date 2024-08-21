@@ -4,8 +4,8 @@ const db = [];
 
 let proxId = 1;
 
-const model = (body, id = proxId++) => {
-  let ID_bilheteria = bilheteria.show(0);
+const model = (cinema, id = proxId++) => {
+ // let ID_bilheteria = bilheteria_controller.show(0);
   if (
     cinema.nome != undefined &&
     cinema.nome != "" &&
@@ -18,7 +18,7 @@ const model = (body, id = proxId++) => {
   ) {
     return {
       id,
-      bilheteria_id: cinema.ID_bilheteria,
+      ID_bilheteria: cinema.ID_bilheteria,
       nome: cinema.nome,
       rua: cinema.rua,
       numero: cinema.numero,
