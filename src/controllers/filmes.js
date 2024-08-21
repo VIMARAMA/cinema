@@ -1,4 +1,6 @@
 const produtora_controller = require("./produtora.js");
+const elenco_controller = require("./elenco.js");
+
 
 const db = [];
 
@@ -19,12 +21,14 @@ const model = (body, id = proxId++) => {
     filmes.classificacao == 14 ||
     filmes.classificacao == 16 ||
     (filmes.classificacao == 18 &&
+        filmes.elenco != "" &&
       filmes.ID_produtora != undefined &&
       produtora_controller.show(filmes.ID_produtora))
   ) {
     return {
       id,
       produtora_id: filmes.ID_produtora,
+      elenco_id: filme.elenco,
       titulo: filmes.titulo,
       duracao: filmes.duracao,
       genero: filmes.genero,
