@@ -11,6 +11,7 @@ const model = (body, id = proxId++) => {
       cinema.nome != "" &&
       cinema.rua != ""&&
       cinema.numero != "" &&
+      cinema.nome > 0 &&
       cinema.bairro != "" &&
       cinema.ID_bilheteria != undefined &&
       bilheteria_controller.show(cinema.ID_bilheteria)
