@@ -1,17 +1,17 @@
 const db = [];
 let nextId = 1;
-const sessao = require("./sessao");
+const sessao_controller = require("./sessao");
 
 const model = (cliente, id = nextId++) => {
   if (
     cliente.nome != undefined &&
     cliente.nome != "" &&
-    sessao.show(id_sessao)
+    sessao_controller.show(cliente.id_sessao)
   ) {
     return {
       id,
       nome: cliente.nome,
-      id_sessao,
+      sessao: cliente.id_sessao,
     };
   }
 };
