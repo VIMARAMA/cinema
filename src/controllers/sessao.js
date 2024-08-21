@@ -1,4 +1,4 @@
-const filme_controller = require("./filme.js");
+const filme_controller = require("./filmes.js");
 const sala_controller = require("./sala.js");
 
 const db = [];
