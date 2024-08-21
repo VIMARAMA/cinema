@@ -20,6 +20,7 @@
 -duracao
 -genero
 -classificacao
+-elenco_id
 -produtora_id
 
 5. Sessão:
@@ -46,3 +47,9 @@
 9. Produtora:
 -nome
 -id
+
+10. Elenco:
+-id
+-nome
+
+12. Index 
