@@ -42,3 +42,7 @@
 -nome
 -id
 -sessao_id
+
+9. Produtora:
+-nome
+-id
