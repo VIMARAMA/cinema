@@ -5,19 +5,26 @@ const db = [];
 let proxId = 1;
 
 const model = (body, id = proxId++) => {
-    let ID_bilheteria = bilheteria.show(0);
-    if (
-      cinema.nome != undefined &&
-      cinema.nome != "" &&
-      cinema.rua != ""&&
-      cinema.numero != "" &&
-      cinema.nome > 0 &&
-      cinema.bairro != "" &&
-      cinema.ID_bilheteria != undefined &&
-      bilheteria_controller.show(cinema.ID_bilheteria)
-    ) {
-      return { id, bilheteria_id: cinema.ID_bilheteria, nome: cinema.nome };
-    }
+  let ID_bilheteria = bilheteria.show(0);
+  if (
+    cinema.nome != undefined &&
+    cinema.nome != "" &&
+    cinema.rua != "" &&
+    cinema.numero != "" &&
+    cinema.nome > 0 &&
+    cinema.bairro != "" &&
+    cinema.ID_bilheteria != undefined &&
+    bilheteria_controller.show(cinema.ID_bilheteria)
+  ) {
+    return {
+      id,
+      bilheteria_id: cinema.ID_bilheteria,
+      nome: cinema.nome,
+      rua: cinema.rua,
+      numero: cinema.numero,
+      bairro: cinema.bairro,
+    };
+  }
 };
 
 const store = (body) => {
